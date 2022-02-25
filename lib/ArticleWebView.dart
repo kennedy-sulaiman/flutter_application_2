@@ -10,10 +10,9 @@ class ArticleWebView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("News App"),
-      ),
-      body: WebView(initialUrl: url, javascriptMode: JavascriptMode.unrestricted,),
-    );
+        appBar: AppBar(
+          title: Text("News App"),
+        ),
+        body: WebView(initialUrl: url));
   }
 }
