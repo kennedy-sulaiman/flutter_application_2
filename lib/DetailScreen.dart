@@ -17,7 +17,9 @@ class DetailScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Image.network(article.urlToImage),
+            Hero(
+                tag: article.urlToImage,
+                child: Image.network(article.urlToImage)),
             Padding(
               padding: EdgeInsets.all(10),
               child: Column(
@@ -46,7 +48,8 @@ class DetailScreen extends StatelessWidget {
                   ElevatedButton(
                     child: Text('Read more'),
                     onPressed: () {
-                      Navigator.pushNamed(context, ArticleWebView.routeName, arguments: article.url);
+                      Navigator.pushNamed(context, ArticleWebView.routeName,
+                          arguments: article.url);
                     },
                   ),
                 ],
